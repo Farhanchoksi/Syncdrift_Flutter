@@ -15,13 +15,11 @@ dependencies:
   riverpod: ^2.5.1
   flutter_riverpod: ^2.5.1
   rxdart: ^0.27.7
-  syncdrift_flutter:
-    path: ../../packages/syncdrift_flutter
+  syncdrift_flutter: ^0.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   drift_dev: ^2.20.0
-  syncdrift_generator:
-    path: ../../packages/syncdrift_generator
+  syncdrift_generator: ^0.1.0
   build_runner: ^2.4.9
