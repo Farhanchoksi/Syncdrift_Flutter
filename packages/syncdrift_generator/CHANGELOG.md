@@ -3,6 +3,11 @@
 All notable changes to this package are documented here.
 See the [root CHANGELOG](https://github.com/Farhanchoksi/Syncdrift_Flutter/blob/main/CHANGELOG.md) for the full framework release history.
 
+## [0.1.1] - 2026-06-05
+
+### Changed
+- Widen dependency constraints for code generation packages (analyzer, build, source_gen, etc.) to support latest versions.
+
 ## [0.1.0] - 2026-06-05
 
 ### Added

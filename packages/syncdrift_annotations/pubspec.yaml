@@ -1,6 +1,6 @@
 name: syncdrift_annotations
 description: Annotations for the syncdrift_flutter database framework (@Repository, @Cached, @SyncTable, @HasMany, @BelongsTo).
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/Farhanchoksi/Syncdrift_Flutter
 repository: https://github.com/Farhanchoksi/Syncdrift_Flutter
 issue_tracker: https://github.com/Farhanchoksi/Syncdrift_Flutter/issues

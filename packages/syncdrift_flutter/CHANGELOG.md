@@ -3,6 +3,16 @@
 All notable changes to this package are documented here.
 See the [root CHANGELOG](https://github.com/Farhanchoksi/Syncdrift_Flutter/blob/main/CHANGELOG.md) for the complete release history.
 
+## [0.1.1] - 2026-06-05
+
+### Changed
+- Widen dependency constraints (connectivity_plus, drift, sqlite3_flutter_libs, riverpod, rxdart) to support latest major versions.
+- Fix non-future await warning on Supabase `RealtimeChannel.subscribe()`.
+- Fix curly braces lints for control flow structures.
+
+### Added
+- Add package example application directory.
+
 ## [0.1.0] - 2026-06-05
 
 ### Added
