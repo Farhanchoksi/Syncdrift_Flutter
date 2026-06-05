@@ -4,7 +4,7 @@ version: 0.1.0
 homepage: https://github.com/Farhanchoksi/Syncdrift_Flutter
 repository: https://github.com/Farhanchoksi/Syncdrift_Flutter
 issue_tracker: https://github.com/Farhanchoksi/Syncdrift_Flutter/issues
-publish_to: none
+
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -15,8 +15,7 @@ dependencies:
   source_gen: ^1.5.0
   code_builder: ^4.10.0
   dart_style: ^2.3.6
-  syncdrift_annotations:
-    path: ../syncdrift_annotations
+  syncdrift_annotations: ^0.1.0
 
 dev_dependencies:
   build_test: ^2.2.2
