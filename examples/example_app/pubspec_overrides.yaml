@@ -1,0 +1,8 @@
+# melos_managed_dependency_overrides: syncdrift_annotations,syncdrift_flutter,syncdrift_generator
+dependency_overrides:
+  syncdrift_annotations:
+    path: ../../packages/syncdrift_annotations
+  syncdrift_flutter:
+    path: ../../packages/syncdrift_flutter
+  syncdrift_generator:
+    path: ../../packages/syncdrift_generator

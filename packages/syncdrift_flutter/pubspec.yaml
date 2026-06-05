@@ -1,0 +1,32 @@
+name: syncdrift_flutter
+description: A modern offline-first reactive database framework built on top of Drift. Ships with SWR caching, offline sync queue, real-time push, and file storage — in one package.
+version: 0.1.0
+homepage: https://github.com/Farhanchoksi/Syncdrift_Flutter
+repository: https://github.com/Farhanchoksi/Syncdrift_Flutter
+issue_tracker: https://github.com/Farhanchoksi/Syncdrift_Flutter/issues
+publish_to: none
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  drift: ^2.20.0
+  sqlite3_flutter_libs: ^0.5.24
+  riverpod: ^2.5.1
+  rxdart: ^0.27.7
+  connectivity_plus: ^6.0.3
+  http: ^1.2.0
+  supabase: ^2.6.0
+  path: ^1.9.0
+  path_provider: ^2.1.3
+  syncdrift_annotations:
+    path: ../syncdrift_annotations
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  drift_dev: ^2.20.0
+  build_runner: ^2.4.9

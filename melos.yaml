@@ -1,0 +1,11 @@
+name: syncdrift
+repository: https://github.com/your_org/syncdrift_flutter
+
+packages:
+  - packages/*
+  - examples/*
+
+command:
+  bootstrap:
+    # Use pub get for all packages
+    runPubGetInParallel: true

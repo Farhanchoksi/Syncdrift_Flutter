@@ -1,0 +1,27 @@
+name: example_app
+description: An example application demonstrating the syncdrift_flutter framework.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  drift: ^2.20.0
+  sqlite3_flutter_libs: ^0.5.24
+  riverpod: ^2.5.1
+  flutter_riverpod: ^2.5.1
+  rxdart: ^0.27.7
+  syncdrift_flutter:
+    path: ../../packages/syncdrift_flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  drift_dev: ^2.20.0
+  syncdrift_generator:
+    path: ../../packages/syncdrift_generator
+  build_runner: ^2.4.9

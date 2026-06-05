@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: syncdrift_annotations
+dependency_overrides:
+  syncdrift_annotations:
+    path: ../syncdrift_annotations

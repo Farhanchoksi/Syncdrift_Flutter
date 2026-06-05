@@ -1,0 +1,7 @@
+builders:
+  syncdrift_builder:
+    import: "package:syncdrift_generator/syncdrift_generator.dart"
+    builder_factories: ["syncdriftBuilder"]
+    build_extensions: {".dart": [".syncdrift.dart"]}
+    auto_apply: dependents
+    build_to: source
