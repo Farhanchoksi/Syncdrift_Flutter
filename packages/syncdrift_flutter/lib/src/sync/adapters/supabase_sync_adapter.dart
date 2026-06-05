@@ -46,7 +46,9 @@ class SupabaseSyncAdapter implements SyncAdapter {
       throw TerminalSyncException(
           'Supabase PostgrestException: ${e.message} (code: ${e.code})');
     } catch (e) {
-      if (e is TerminalSyncException) rethrow;
+      if (e is TerminalSyncException) {
+        rethrow;
+      }
       throw Exception('Supabase transient error: $e');
     }
   }

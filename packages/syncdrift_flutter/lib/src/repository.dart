@@ -23,7 +23,9 @@ abstract class SyncdriftRepository<T, InsertCompanion> {
   /// Converts a snake_case key to camelCase.
   String snakeToCamel(String snake) {
     final parts = snake.split('_');
-    if (parts.isEmpty) return '';
+    if (parts.isEmpty) {
+      return '';
+    }
     final buffer = StringBuffer(parts[0]);
     for (int i = 1; i < parts.length; i++) {
       final part = parts[i];
@@ -86,7 +88,9 @@ abstract class SyncdriftRepository<T, InsertCompanion> {
       whereArgs: whereArgs,
       limit: 1,
     );
-    if (rows.isEmpty) return null;
+    if (rows.isEmpty) {
+      return null;
+    }
     return mapRow(convertRowToCamel(rows.first));
   }
 

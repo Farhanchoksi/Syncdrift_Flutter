@@ -25,7 +25,9 @@ class SupabaseRealtimeAdapter implements RealtimeAdapter {
 
   @override
   Future<void> connect() async {
-    if (_channel != null) return;
+    if (_channel != null) {
+      return;
+    }
 
     final channel = supabase.channel('syncdrift-postgres-changes');
 
@@ -52,12 +54,14 @@ class SupabaseRealtimeAdapter implements RealtimeAdapter {
     }
 
     _channel = channel;
-    await channel.subscribe();
+    channel.subscribe();
   }
 
   @override
   Future<void> disconnect() async {
-    if (_channel == null) return;
+    if (_channel == null) {
+      return;
+    }
 
     await supabase.removeChannel(_channel!);
     _channel = null;

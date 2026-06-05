@@ -34,7 +34,9 @@ class SyncdriftStorageManager {
 
   /// Resolves filesystem folders and creates tracking tables in SQLite.
   Future<void> init() async {
-    if (_initialized) return;
+    if (_initialized) {
+      return;
+    }
 
     // Resolve local cache folder
     if (customCacheDir != null) {
@@ -155,7 +157,9 @@ class SyncdriftStorageManager {
 
   /// Manually trigger upload queue processing.
   Future<void> triggerUploadQueue() async {
-    if (_isProcessing) return;
+    if (_isProcessing) {
+      return;
+    }
     if (_backoffUntil != null && DateTime.now().isBefore(_backoffUntil!)) {
       return;
     }
@@ -173,7 +177,9 @@ class SyncdriftStorageManager {
       // Check connectivity
       final status = await connectivity.checkConnectivity();
       final isOnline = status.any((r) => r != ConnectivityResult.none);
-      if (!isOnline) break;
+      if (!isOnline) {
+        break;
+      }
 
       // Select oldest pending upload
       final rows = await dbDriver.select(
@@ -182,7 +188,9 @@ class SyncdriftStorageManager {
         limit: 1,
       );
 
-      if (rows.isEmpty) break;
+      if (rows.isEmpty) {
+        break;
+      }
 
       final op = PendingUpload.fromMap(rows.first);
 

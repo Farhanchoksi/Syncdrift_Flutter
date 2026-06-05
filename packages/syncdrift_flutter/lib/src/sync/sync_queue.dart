@@ -65,9 +65,12 @@ class SyncQueueProcessor {
 
   /// Manually trigger queue processing.
   Future<void> triggerProcess() async {
-    if (_isProcessing) return;
-    if (_backoffUntil != null && DateTime.now().isBefore(_backoffUntil!))
+    if (_isProcessing) {
       return;
+    }
+    if (_backoffUntil != null && DateTime.now().isBefore(_backoffUntil!)) {
+      return;
+    }
 
     _isProcessing = true;
     try {
@@ -83,7 +86,9 @@ class SyncQueueProcessor {
       final status = await connectivity.checkConnectivity();
       final isOnline = status.any((r) => r != ConnectivityResult.none);
 
-      if (!isOnline) break;
+      if (!isOnline) {
+        break;
+      }
 
       // Select oldest pending item (FIFO)
       final rows = await dbDriver.select(
@@ -92,7 +97,9 @@ class SyncQueueProcessor {
         limit: 1,
       );
 
-      if (rows.isEmpty) break;
+      if (rows.isEmpty) {
+        break;
+      }
 
       final op = PendingOperation.fromMap(rows.first);
 

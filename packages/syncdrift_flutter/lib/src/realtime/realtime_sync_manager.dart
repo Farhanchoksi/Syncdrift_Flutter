@@ -23,7 +23,9 @@ class RealtimeSyncManager {
 
   /// Connects all adapters and starts listening to remote changes.
   Future<void> start() async {
-    if (_isRunning) return;
+    if (_isRunning) {
+      return;
+    }
     _isRunning = true;
 
     for (final adapter in adapters) {
@@ -45,7 +47,9 @@ class RealtimeSyncManager {
 
   /// Stop listening and disconnect all adapters.
   Future<void> stop() async {
-    if (!_isRunning) return;
+    if (!_isRunning) {
+      return;
+    }
     _isRunning = false;
 
     for (final subscription in _subscriptions) {

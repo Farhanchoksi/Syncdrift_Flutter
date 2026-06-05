@@ -19,7 +19,9 @@ class WebSocketRealtimeAdapter implements RealtimeAdapter {
 
   @override
   Future<void> connect() async {
-    if (_channel != null) return;
+    if (_channel != null) {
+      return;
+    }
 
     final uri = Uri.parse(url);
     _channel = WebSocketChannel.connect(uri);
